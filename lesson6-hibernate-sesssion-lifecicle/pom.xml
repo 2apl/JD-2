@@ -9,11 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>hibernate-intro</artifactId>
+    <artifactId>lesson6-hibernate-sesssion-lifecicle</artifactId>
     <version>${project.version}</version>
     <packaging>jar</packaging>
 
+
     <dependencies>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>lesson6-hibernate-sesssion-lifecicle</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-core</artifactId>
@@ -40,7 +47,7 @@
     </dependencies>
 
     <build>
-        <finalName>lesson5-hibernate-intro</finalName>
+        <finalName>lesson6-hibernate-sesssion-lifecicle</finalName>
     </build>
 
 </project>
