@@ -11,7 +11,7 @@
 
     <modules>
         <module>lesson5-hibernate-intro</module>
-        <module>lesson6-hibernate-sesssion-lifecicle</module>
+        <module>lesson6-hibernate-session-lifecycle</module>
     </modules>
 
     <properties>
