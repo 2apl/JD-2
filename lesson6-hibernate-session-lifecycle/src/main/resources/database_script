@@ -1,0 +1,39 @@
+create schema employee_storage;
+
+drop table employee_storage.employee;
+
+create table employee_storage.employee
+(
+    id     bigserial primary key,
+    name   character varying(128) not null,
+    gender character varying(64)  not null
+);
+
+insert into employee_storage.employee (name)
+VALUES ('Ivan');
+
+create table employee_storage.employee_sequence
+(
+    id   bigint primary key,
+    name character varying(128) not null
+);
+
+create sequence employee_storage.employee_id_sequence
+    start 1
+    owned by employee_storage.employee.id;
+
+select e.id, e.name, s.id
+from employee_storage.employee as e
+         inner join employee_storage.employee_sequence as s on e.id = s.id;
+
+create table employee_storage.table_sequence
+(
+    table_name character varying(128) not null,
+    pk_value   bigint                 not null default 1
+);
+
+create table employee_storage.employee_table
+(
+    id bigserial primary key ,
+    name character varying (128) not null
+);
