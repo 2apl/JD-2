@@ -29,7 +29,7 @@ public class Employee {
     @Id
     /**
      * AUTO - Hibernate defines one of the following 3 strategies (default IDENTITY)
-     * IDENTITY - Id provided by DB table
+     * IDENTITY - Id provided by DB table, if Id column is serial
      * SEQUENCE - sequence by DB table
      * TABLE - another separate table from DB provided ID
      */
