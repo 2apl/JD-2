@@ -13,6 +13,7 @@
         <module>lesson5-hibernate-intro</module>
         <module>lesson6-hibernate-session-lifecycle</module>
         <module>lesson7-hibernate-base-mappings</module>
+        <module>lesson8-hibernate-associations-mapping</module>
     </modules>
 
     <properties>
