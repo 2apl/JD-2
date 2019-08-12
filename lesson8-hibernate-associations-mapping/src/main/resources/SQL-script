@@ -1,0 +1,83 @@
+create schema employee_storage;
+
+drop table employee_storage.employee;
+
+create table employee_storage.employee
+(
+    id     bigserial primary key,
+    name   character varying(128) unique not null,
+    gender character varying(64)  not null,
+    company_id bigint references employee_storage.company(id)
+);
+
+drop table employee_storage.company;
+
+create table employee_storage.company
+(
+    id bigserial primary key ,
+    name character varying (256) unique not null
+);
+
+drop table employee_storage.contact;
+
+create table employee_storage.contact
+(
+    id bigserial primary key ,
+    email character varying (128),
+    phone character varying (128),
+    employee_id bigint not null references employee_storage.company(id)
+);
+
+create table employee_storage.meeting
+(
+    id bigserial primary key ,
+    name character varying (128)
+);
+
+drop table employee_storage.employee_meeting;
+
+create table employee_storage.employee_meeting
+(
+    id bigserial primary key ,
+    employee_id bigint not null references employee_storage.employee(id),
+    meeting_id bigint not null references employee_storage.meeting,
+    meeting_date timestamp not null default now(),
+    unique (employee_id, meeting_id)
+);
+
+insert into employee_storage.employee (name)
+VALUES ('Ivan');
+
+create table employee_storage.employee_sequence
+(
+    id   bigint primary key,
+    name character varying(128) not null
+);
+
+create sequence employee_storage.employee_id_sequence
+    start 1
+    owned by employee_storage.employee.id;
+
+select e.id, e.name, s.id
+from employee_storage.employee as e
+         inner join employee_storage.employee_sequence as s on e.id = s.id;
+
+create table employee_storage.table_sequence
+(
+    table_name character varying(128) not null,
+    pk_value   bigint                 not null default 1
+);
+
+create table employee_storage.employee_table
+(
+    id bigserial primary key ,
+    name character varying (128) not null
+);
+
+create table employee_storage.multiple
+(
+    first_id bigint not null ,
+    second_id bigint not null ,
+    name character varying (128) ,
+    primary key (first_id, second_id)
+)
