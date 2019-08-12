@@ -4,26 +4,27 @@
     <facet type="hibernate" name="Hibernate">
       <configuration>
         <datasource-map>
-          <unit-entry name="hibernate.cfg.xml" value="b9dd1f5a-aba1-436e-a953-55924183fff1" />
+          <unit-entry name="hibernate.cfg.xml" />
         </datasource-map>
         <naming-strategy-map />
-        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/src/main/resources/hibernate.cfg.xml" />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/src/main/resources/hibernate.cfg.xml" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
-    <output url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/target/classes" />
-    <output-test url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/target/test-classes" />
-    <content url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle">
-      <sourceFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/src/main/resources" type="java-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/src/test/java" isTestSource="true" />
-      <excludeFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/${project.build.directory}/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/${project.build.directory}/test-classes" />
-      <excludeFolder url="file://$MODULE_DIR$/../lesson6-hibernate-session-lifecycle/target" />
+    <output url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/target/classes" />
+    <output-test url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/target/test-classes" />
+    <content url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping">
+      <sourceFolder url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/src/test/java" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../lesson8-hibernate-associations-mapping/target" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="lesson7-hibernate-base-mappings" />
+    <orderEntry type="module" module-name="lesson6-hibernate-session-lifecycle" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.2.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />
@@ -43,9 +44,6 @@
     <orderEntry type="library" name="Maven: org.jvnet.staxex:stax-ex:1.8" level="project" />
     <orderEntry type="library" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" level="project" />
     <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.2.5" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.4.199" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.13-beta-2" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.6" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
   </component>

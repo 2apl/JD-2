@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import java.io.Serializable;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,9 +17,9 @@ import lombok.ToString;
  * Annotation for extending entity
  * */
 @MappedSuperclass
-public class BaseEntity {
+public class BaseEntity<PK extends Serializable> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private PK id;
 }
