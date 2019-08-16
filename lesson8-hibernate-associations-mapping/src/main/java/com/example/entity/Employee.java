@@ -70,4 +70,9 @@ public class Employee extends BaseEntity<Long> {
         this.company = company;
     }
 
+    public Employee(String name, Gender gender) {
+        this.name = name;
+        this.gender = gender;
+    }
+
 }
